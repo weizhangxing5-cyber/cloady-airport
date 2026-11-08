@@ -4,7 +4,7 @@ FROM alpine:3.20
 RUN apk add --no-cache nodejs curl unzip ca-certificates
 
 # 下载并安装官方最新版 Xray-core
-RUN curl -sL -o /tmp/xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip && \
+RUN curl -sL -o /tmp/xray.zip https://github.com/XTLS/Xray-core/releases/download/v25.10.15/Xray-linux-64.zip && \
     unzip -q /tmp/xray.zip xray -d /usr/local/bin/ && \
     chmod +x /usr/local/bin/xray && \
     rm -f /tmp/xray.zip
